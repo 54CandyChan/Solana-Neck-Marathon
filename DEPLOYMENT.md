@@ -29,6 +29,38 @@
 
 所以单靠浏览器钱包弹窗，当前这个桌面工作流里不能可靠完成程序部署。
 
+## 如果你坚持使用 Phantom 里的钱包
+
+可以导出 Phantom 的 Solana 私钥，再在本地转换成 CLI 用的 `id.json` 文件。
+
+Phantom 官方帮助中心说明了可以查看或导出私钥，入口通常是：
+
+- `Settings`
+- `Manage Accounts`
+- 选择对应账户
+- `Show Private Key`
+- 选择 `Solana`
+
+官方来源：
+
+- [Phantom Help: View or export your recovery phrase or private keys in Phantom](https://help.phantom.com/hc/en-us/articles/25334064171795-View-or-export-your-recovery-phrase-or-private-keys-in-Phantom)
+
+导出后，在本地项目目录运行：
+
+```powershell
+npm install
+npm run import:phantom-key
+```
+
+然后：
+
+1. 把 Phantom 导出的 Solana 私钥粘贴进本地终端
+2. 看脚本显示的钱包地址是不是你要用的地址
+3. 输入 `YES`
+4. 脚本会生成 `C:\Users\Candy\.config\solana\id.json`
+
+这一步只在你的电脑本地进行，不会上传私钥。
+
 ## 你需要准备的最少条件
 
 ### 1. 本地部署钱包私钥

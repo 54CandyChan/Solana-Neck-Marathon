@@ -25,6 +25,29 @@
 
 这个设计可以避免重复发币。
 
+## 如果你坚持使用 Phantom 里的钱包做部署
+
+可以，但不要把私钥发给任何人，也不要粘贴到任何网站。
+
+你只需要做两步：
+
+1. 在 Phantom 里导出这个账户的 `Solana private key`
+2. 在你自己的电脑本地终端运行：
+
+```bash
+npm install
+npm run import:phantom-key
+```
+
+脚本会在本地做这些事：
+
+- 让你粘贴 Phantom 导出的 Solana 私钥
+- 自动识别对应的钱包地址
+- 让你确认地址是否正确
+- 自动写入 `C:\Users\Candy\.config\solana\id.json`
+
+这样就能把 Phantom 的私钥转换成 Solana CLI 和 Anchor 可用的本地部署文件。
+
 ## 指令说明
 
 ### `initialize()`
