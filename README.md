@@ -77,6 +77,8 @@
 - Anchor CLI
 - Node.js / Yarn
 
+更完整的部署限制和步骤见 [DEPLOYMENT.md](C:/Users/Candy/Documents/Codex/2026-05-10/solona-devnet-candy-golden-coins-cgd-2/DEPLOYMENT.md:1)。
+
 ### 2. 修改程序 ID
 
 当前示例使用的是 Anchor 默认示例 Program ID：
@@ -93,6 +95,12 @@ anchor keys list
 
 - `Anchor.toml`
 - `programs/cgd_store/src/lib.rs`
+
+也可以直接运行：
+
+```bash
+node scripts/set-program-id.mjs <YOUR_PROGRAM_ID>
+```
 
 ### 3. 初始化金库
 
